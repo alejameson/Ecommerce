@@ -1,7 +1,8 @@
-import { GET_PRODUCTS } from "../actions";
+import { ADD_CART_PRODUCT, GET_PRODUCTS } from "../actions";
 
 const initialState = {
     products: [],
+    cartProducts: [],
 }
 
 function rootReducer (state = initialState, action){
@@ -9,8 +10,14 @@ function rootReducer (state = initialState, action){
 
         case GET_PRODUCTS:
             return {
+                ...state,
                 products: action.payload,
-                ...state
+            }
+
+        case ADD_CART_PRODUCT:
+            return {
+                ...state,
+                cartProducts: state.cartProducts.filter((p) => p.id === action.payload.id).length ? state.cartProducts : state.cartProducts.concat(action.payload),
             }
 
         default:

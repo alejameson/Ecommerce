@@ -1,0 +1,14 @@
+.totalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
+  height: 150px;
+  width: 350px;
+  background: rgba(254, 237, 56, 0.78);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 1px solid rgba(254, 237, 56, 0.53);
+}
